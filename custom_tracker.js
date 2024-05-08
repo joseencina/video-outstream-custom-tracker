@@ -1,7 +1,7 @@
 /**
-     * TRACKING_URLS Information
-     * Please, add the specific tracking URLs
-    */
+ * TRACKING_URLS Information
+ * Please, add the specific tracking URLs
+*/
 const TRACKING_URLS = {
     "START": "TRACKING_URL", //Replace "TRACKING_URL" value
     "COMPLETE": "TRACKING_URL" //Replace "TRACKING_URL" value
