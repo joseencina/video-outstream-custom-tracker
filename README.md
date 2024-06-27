@@ -1,11 +1,15 @@
-## Video Out-Stream Custom Tracker for Equativ
-This custom logic is designed to trigger custom tracking pixels during various events when utilizing Video Out-Stream templates.
+# Video Out-Stream Custom Tracker for Equativ
+This custom logic is designed to trigger custom tracking pixels during various events when utilizing Video Out-Stream templates at Equativ.
 
-### Description
+
+> [!IMPORTANT]
+> This document assumes that the user who performs this integration has access to [Equativ's services](https://equativ.com/).
+
+## Description
 
 The logic primarily focuses on capturing the `Start` and `Complete` events triggered by the video player during the playback of video ad content.
 
-These events are considered to activate the custom tracking pixels specified in the `TRACKING_URLS` object. Follow Integration Details below. 
+These events are considered to activate the custom tracking pixels specified in the `TRACKING_URLS` object. Follow [Integration Details](#integration-details) below. 
 
 ### Integration Details
 
@@ -20,7 +24,7 @@ Example of integration:
 </script> 
 ```
 
-#### Tracking URLs Configuration
+### Tracking URLs Configuration
 
 To deliver the required tracking pixels, the URL or URLs should be inserted as values for the "START" and/or "COMPLETE" statuses as applicable.
 
@@ -39,7 +43,7 @@ const TRACKING_URLS = {
 }
 ```
 
-#### Debug Options
+### Debug Options
 
 The code includes console logs corresponding to various stages of the logic execution. These logs can be activated by setting the parameter `CUSTOM_TRACKER.res.debug` to `true`.
 
@@ -54,13 +58,11 @@ CUSTOM_TRACKER = {
 }
 ```
 
-#### Player Detection
+### Player Detection
 
 The code is executed upon detection of the `adBegin` event, which is officially supported by Equativ ([documentation link](https://help.smartadserver.com/s/article/Smart-Video-Read#:~:text=in%20the%20console.-,Event%20listening,-The%20In%2Dread)). This event is essential for detecting the presence of the video player.
 
 
-### Additional Information
-
-#### Minified Version
-
-In addition, this repository provides a minified version of the code (`custom_tracker.min.js`) to enhance user experience. This is because the code needs to be manually integrated, and its expanded form may occupy too much screen space when interacting with the insertion configuration.
+## Minified Code Version
+This repository provides a _**minified version**_ of the code (`custom_tracker.min.js`) to enhance user experience.\
+This is provide in order to save screen space as the _Custom Script_ parameter may occupy too much when interacting with the insertion configuration.
