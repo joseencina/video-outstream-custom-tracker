@@ -14,7 +14,7 @@ These events are considered to activate the custom tracking pixels specified in 
 This code is intended to be included in Equativ's insertion configuration. It should be integrated into the Custom Script parameter using `<script>` HTML tags.
 
 Example of integration:
-```
+```html
 <script>
     /* custom_tracker.js code here */
 </script> 
@@ -25,14 +25,14 @@ Example of integration:
 To deliver the required tracking pixels, the URL or URLs should be inserted as values for the "START" and/or "COMPLETE" statuses as applicable.
 
 For example, considering the original code:
-```
+```javascript
 const TRACKING_URLS = {
     "START": "TRACKING_URL",
     "COMPLETE": "TRACKING_URL"
 }
 ```
 Here is the code when integrating both tracking URLs:
-```
+```javascript
 const TRACKING_URLS = {
     "START": "https://tacker.trackerprovider.com/pixel_start",
     "COMPLETE": "https://tacker.trackerprovider.com/pixel_complete"
@@ -43,7 +43,7 @@ const TRACKING_URLS = {
 
 The code includes console logs corresponding to various stages of the logic execution. These logs can be activated by setting the parameter `CUSTOM_TRACKER.res.debug` to `true`.
 
-```
+```javascript
 /* Extract from the code */
 CUSTOM_TRACKER = {
     (...),
